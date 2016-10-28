@@ -1,0 +1,24 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+# SharpDevelop 5.1
+Project("{0E96FCFA-9DAC-4534-AC18-01A90C368873}") = "TeseCpp", "TeseCpp\TeseCpp.vcxproj", "{119AE9BA-99FE-40D8-B5AE-C6F52DE9E385}"
+EndProject
+Project("{0E96FCFA-9DAC-4534-AC18-01A90C368873}") = "TeseCpp.Tests", "TeseCpp.Tests\TeseCpp.Tests.vcxproj", "{56E47C7C-10AC-46B7-B308-278FB8AABD59}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{119AE9BA-99FE-40D8-B5AE-C6F52DE9E385}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{119AE9BA-99FE-40D8-B5AE-C6F52DE9E385}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{119AE9BA-99FE-40D8-B5AE-C6F52DE9E385}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{119AE9BA-99FE-40D8-B5AE-C6F52DE9E385}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56E47C7C-10AC-46B7-B308-278FB8AABD59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56E47C7C-10AC-46B7-B308-278FB8AABD59}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56E47C7C-10AC-46B7-B308-278FB8AABD59}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56E47C7C-10AC-46B7-B308-278FB8AABD59}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
