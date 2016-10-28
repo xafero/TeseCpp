@@ -76,24 +76,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="resource.h" />
+    <ClInclude Include="Address.h" />
+    <ClInclude Include="City.h" />
+    <ClInclude Include="Customer.h" />
+    <ClInclude Include="State.h" />
     <ClInclude Include="Stdafx.h" />
-    <ClInclude Include="TeseCpp.Tests.h" />
+    <ClInclude Include="TeseTest.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Address.cpp" />
     <ClCompile Include="AssemblyInfo.cpp" />
+    <ClCompile Include="City.cpp" />
+    <ClCompile Include="Customer.cpp" />
+    <ClCompile Include="State.cpp" />
     <ClCompile Include="Stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="TeseCpp.Tests.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="app.ico" />
-    <None Include="ReadMe.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <ResourceCompile Include="app.rc" />
+    <ClCompile Include="TeseTest.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
