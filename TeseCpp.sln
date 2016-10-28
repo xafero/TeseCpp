@@ -1,8 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TeseCppConsole", "TeseCppConsole\TeseCppConsole.vcxproj", "{4D09D87F-EF81-4139-947A-10046E2588A7}"
-EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TeseCpp", "TeseCpp\TeseCpp.vcxproj", "{B7AA8D61-B276-427F-B7F9-BD4B7CD641B0}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TeseCpp.Tests", "TeseCpp.Tests\TeseCpp.Tests.vcxproj", "{64D3DB4E-605E-4A00-891A-A76FCD958980}"
@@ -13,10 +11,6 @@ Global
 		Release|Win32 = Release|Win32
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{4D09D87F-EF81-4139-947A-10046E2588A7}.Debug|Win32.ActiveCfg = Debug|Win32
-		{4D09D87F-EF81-4139-947A-10046E2588A7}.Debug|Win32.Build.0 = Debug|Win32
-		{4D09D87F-EF81-4139-947A-10046E2588A7}.Release|Win32.ActiveCfg = Release|Win32
-		{4D09D87F-EF81-4139-947A-10046E2588A7}.Release|Win32.Build.0 = Release|Win32
 		{B7AA8D61-B276-427F-B7F9-BD4B7CD641B0}.Debug|Win32.ActiveCfg = Debug|Win32
 		{B7AA8D61-B276-427F-B7F9-BD4B7CD641B0}.Debug|Win32.Build.0 = Debug|Win32
 		{B7AA8D61-B276-427F-B7F9-BD4B7CD641B0}.Release|Win32.ActiveCfg = Release|Win32
