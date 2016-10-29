@@ -11,6 +11,7 @@ namespace TeseCpp {
 		literal String^ emptyPrefix = "";
 	public:
 		String^ Serialize(Object obj);
+		Object Deserialize(String^ txt);
 	};
 
 }
