@@ -28,4 +28,4 @@ reader->Close();
 ```
 
 ## Example loading
-![Image of Debugger](https://raw.githubusercontent.com/xafero/TeseSharp/master/doc/debugging.PNG)
+![Image of Debugger](https://raw.githubusercontent.com/xafero/TeseCpp/master/doc/debugging.png)
