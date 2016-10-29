@@ -13,3 +13,19 @@ TeseCppTests::City::City(String^ name, State^ state, long code)
 	this->state = state;
 	this->code = code;
 }
+
+String^ TeseCppTests::City::Name::get() {
+	return this->name;
+}
+
+Void TeseCppTests::City::Name::set(String^ value) {
+	this->name = value;
+}
+
+long TeseCppTests::City::Code::get() {
+	return this->code;
+}
+
+Void TeseCppTests::City::Code::set(long value) {
+	this->code = value;
+}

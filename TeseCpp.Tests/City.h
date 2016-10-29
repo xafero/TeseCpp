@@ -16,6 +16,8 @@ namespace TeseCppTests {
 	public:
 		City();
 		City(String^ name, State^ state, long code);
+		property String^ Name { String^ get(); void set(String^ value); }
+		property long Code { long get(); void set(long value); }
 	};
 
 }

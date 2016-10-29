@@ -14,3 +14,27 @@ TeseCppTests::Address::Address(String^ street, int number, long postal, City^ ci
 	this->postal = postal;
 	this->city = city;
 }
+
+String^ TeseCppTests::Address::Street::get() {
+	return this->street;
+}
+
+Void TeseCppTests::Address::Street::set(String^ value) {
+	this->street = value;
+}
+
+long TeseCppTests::Address::Postal::get() {
+	return this->postal;
+}
+
+Void TeseCppTests::Address::Postal::set(long value) {
+	this->postal = value;
+}
+
+int TeseCppTests::Address::Number::get() {
+	return this->number;
+}
+
+Void TeseCppTests::Address::Number::set(int value) {
+	this->number = value;
+}
