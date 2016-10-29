@@ -154,26 +154,17 @@ String^ TeseCpp::Tese::ToStr(Object^ value, FieldInfo^ field)
 	if (type->IsEnum)
 		return value->ToString();
 	CultureInfo^ cult = CultureInfo::InvariantCulture;
-	/*switch (type->Name) {
-		case "DateTime":
-			return ((DateTime)value).ToString("yyyy-MM-dd'T'HH:mm:ss.fffzzz");
-		case "Single":
-			return ((float)value).ToString(cult);
-		case "Double":
-			return ((double)value).ToString(cult);
-		case "Decimal":
-			return ((decimal)value).ToString(cult);
-		case "Boolean":
-		case "BigInteger":					
-		case "Int64":
-		case "Char":
-		case "Int32":
-		case "Byte":
-		case "Int16":					
-		case "String":
-			return value.ToString();
-		default:
-			throw gcnew InvalidOperationException(type + " is not supported!");
-	}*/
+	String^ name = type->Name;
+	if (name->Equals("DateTime")) 
+		return ((DateTime)value).ToString("yyyy-MM-dd'T'HH:mm:ss.fffzzz");
+	if (name->Equals("Single"))
+		return ((float)value).ToString(cult);
+	if (name->Equals("Double"))
+		return ((double)value).ToString(cult);
+	if (name->Equals("Decimal"))
+		return ((Decimal)value).ToString(cult);
+	if (Array::BinarySearch(gcnew array<String^> { "Boolean","BigInteger","Int64",
+		"Char","Int32","Byte","Int16","String" }, name) >= 0)
+		return value->ToString();
 	throw gcnew InvalidOperationException(type + " is not supported!");
 }
