@@ -8,7 +8,7 @@ TeseCppTests::Customer::Customer()
 }
 
 TeseCppTests::Customer::Customer(long id, String^ firstName, String^ lastName, 
-	double money, bool male, char sex, int houses, short pets, float crazyness, 
+	double money, bool male, Char sex, int houses, short pets, float crazyness, 
 	Byte bits, BigInteger sleep, Decimal awake, DateTime^ birth, Address^ home)
 {
 	this->id = id;
@@ -42,8 +42,8 @@ Void TeseCppTests::Customer::Money::set(double value) { this->money = value; }
 bool TeseCppTests::Customer::Male::get() { return this->male; }
 Void TeseCppTests::Customer::Male::set(bool value) { this->male = value; }
 
-char TeseCppTests::Customer::Sex::get() { return this->sex; }
-Void TeseCppTests::Customer::Sex::set(char value) { this->sex = value; }
+Char TeseCppTests::Customer::Sex::get() { return this->sex; }
+Void TeseCppTests::Customer::Sex::set(Char value) { this->sex = value; }
 
 int TeseCppTests::Customer::Houses::get() { return this->houses; }
 Void TeseCppTests::Customer::Houses::set(int value) { this->houses = value; }

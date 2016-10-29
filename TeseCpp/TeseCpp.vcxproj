@@ -81,6 +81,7 @@
     <ClInclude Include="Stdafx.h" />
     <ClInclude Include="Tese.h" />
     <ClInclude Include="TeseBuilder.h" />
+    <ClInclude Include="TeseMeta.h" />
     <ClInclude Include="TeseReadException.h" />
     <ClInclude Include="TeseWriteException.h" />
   </ItemGroup>
@@ -92,6 +93,7 @@
     </ClCompile>
     <ClCompile Include="Tese.cpp" />
     <ClCompile Include="TeseBuilder.cpp" />
+    <ClCompile Include="TeseMeta.cpp" />
     <ClCompile Include="TeseReadException.cpp" />
     <ClCompile Include="TeseWriteException.cpp" />
   </ItemGroup>

@@ -4,6 +4,7 @@
 #pragma once
 
 using namespace System;
+using namespace TeseCpp;
 
 namespace TeseCppTests {
 
@@ -11,6 +12,7 @@ namespace TeseCppTests {
 	{
 	private:
 		String^ name;
+		[ForceType(Detail = State::typeid)]
 		State^ state;
 		long code;
 	public:

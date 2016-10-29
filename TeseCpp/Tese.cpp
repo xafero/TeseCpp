@@ -78,15 +78,20 @@ bool TeseCpp::Tese::FindLongerKey(IDictionary^ props, String^ shortKey)
 		
 Object^ TeseCpp::Tese::FromStr(String^ val, FieldInfo^ field)
 {
-	Type^ type = field->FieldType;
+	Type^ type = field->FieldType;	
+	array<Object^>^ attrs = field->GetCustomAttributes(ForceTypeAttribute::typeid, true);
+	if (attrs != nullptr && attrs->Length >= 1)
+		type = safe_cast<ForceTypeAttribute^>(attrs[0])->Detail;
 	if (type->IsEnum)
 		return Enum::Parse(type, val);
-	CultureInfo^ cult = CultureInfo::InvariantCulture;
+	CultureInfo^ cult = CultureInfo::InvariantCulture;	
 	String^ name = type->Name;
 	if (name->Equals("Boolean"))
 		return Boolean::Parse(val);
 	if (name->Equals("Byte"))
 		return Byte::Parse(val);
+	if (name->Equals("SByte"))
+		return SByte::Parse(val);
 	if (name->Equals("Char"))
 		return Char::Parse(val);
 	if (name->Equals("Single"))
@@ -106,7 +111,7 @@ Object^ TeseCpp::Tese::FromStr(String^ val, FieldInfo^ field)
 	if (name->Equals("DateTime"))
 		return DateTime::Parse(val, cult).ToUniversalTime();
 	if (name->Equals("String"))
-		return val;
+		return val;	
 	throw gcnew InvalidOperationException(type + " is not supported!");
 }
 

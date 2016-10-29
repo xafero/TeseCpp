@@ -1,6 +1,7 @@
 
 #include "TeseReadException.h"
 #include "TeseWriteException.h"
+#include "TeseMeta.h"
 
 #pragma once
 
