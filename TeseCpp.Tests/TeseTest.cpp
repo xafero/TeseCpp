@@ -4,9 +4,11 @@
 #include "TeseTest.h"
 
 Void TeseCppTests::TeseTest::TestSetup() {
+	tese = (gcnew TeseBuilder())->SkipNull(true)->Create();
 }
 
 Void TeseCppTests::TeseTest::TestTeardown() {
+	tese = nullptr;
 }
 
 Void TeseCppTests::TeseTest::TestDeserialize() {
