@@ -43,10 +43,10 @@ String^ TeseCppTests::TeseTest::Deflatten(String^ txt) {
 Void TeseCppTests::TeseTest::TestSerialize() {
 	Customer^ cus = gcnew Customer(1, "Harry", "Johnson", 123.89, true, 'm', 42, (short)13,
 				               97.5f, (Byte)7, BigInteger::One * 10, Decimal::One, 
-				               gcnew DateTime((4238249348L * factor) + secSinceEpoch + (36000000000L)),
+				               gcnew DateTime((4238249348ull * factor) + secSinceEpoch + (36000000000ull)),
 				               gcnew Address("West Ohio Street", 22, 50023, 
 				               gcnew City("Ankeny", State::IA, 1L)));
-	String^ txt = Flatten(tese->Serialize(cus));		
+	String^ txt = Flatten(tese->Serialize(cus));
 	Assert::AreEqual(txt1, txt);
 }
 

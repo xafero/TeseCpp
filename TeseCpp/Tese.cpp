@@ -7,7 +7,7 @@ String^ TeseCpp::Tese::Serialize(Object^ obj)
 {
 	array<Byte>^ bytes;
 	{
-		MemoryStream^ mem = gcnew MemoryStream();
+		MemoryStream^ mem = gcnew MemoryStream();		
 		Serialize(obj, mem);
 		bytes = mem->ToArray();
 		mem->Close();
@@ -139,7 +139,7 @@ Void TeseCpp::Tese::SerializeField(String^ prefix, Object^ obj, FieldInfo^ field
 	try {
 		String^ key = field->Name;
 		Object^ val = field->GetValue(obj);
-		String^ objKey = String::Format("{0}.{1}", prefix, key);
+		String^ objKey = String::Format("{0}.{1}", prefix, key);		
 		try {
 			props[objKey] = ToStr(val, field);
 		} catch (InvalidOperationException^) {
@@ -153,6 +153,9 @@ Void TeseCpp::Tese::SerializeField(String^ prefix, Object^ obj, FieldInfo^ field
 String^ TeseCpp::Tese::ToStr(Object^ value, FieldInfo^ field)
 {
 	Type^ type = field->FieldType;
+	array<Object^>^ attrs = field->GetCustomAttributes(ForceTypeAttribute::typeid, true);
+	if (attrs != nullptr && attrs->Length >= 1)
+		type = safe_cast<ForceTypeAttribute^>(attrs[0])->Detail;		
 	if (type->IsEnum)
 		return value->ToString();
 	CultureInfo^ cult = CultureInfo::InvariantCulture;
@@ -165,8 +168,9 @@ String^ TeseCpp::Tese::ToStr(Object^ value, FieldInfo^ field)
 		return ((double)value).ToString(cult);
 	if (name->Equals("Decimal"))
 		return ((Decimal)value).ToString(cult);
-	if (Array::BinarySearch(gcnew array<String^> { "Boolean","BigInteger","Int64",
-		"Char","Int32","Byte","Int16","String" }, name) >= 0)
-		return value->ToString();
+	for each (String^ tn in (gcnew array<String^> { "Boolean","BigInteger","Int64",
+		"Char","Int32","Byte","Int16","String" }))
+		if (name->Equals(tn))
+			return value->ToString();		
 	throw gcnew InvalidOperationException(type + " is not supported!");
 }
