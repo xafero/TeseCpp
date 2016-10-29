@@ -10,7 +10,9 @@ namespace TeseCppTests {
 	public ref class TeseTest 
 	{
 	public:
+		[Test]
 		Void TestSerialize();
+		[Test]
 		Void TestDeserialize();
 	};
 
