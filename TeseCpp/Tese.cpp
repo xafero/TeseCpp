@@ -82,34 +82,31 @@ Object^ TeseCpp::Tese::FromStr(String^ val, FieldInfo^ field)
 	if (type->IsEnum)
 		return Enum::Parse(type, val);
 	CultureInfo^ cult = CultureInfo::InvariantCulture;
-	/*switch (type->Name) {
-		case "Boolean":
-			return Boolean.Parse(val);
-		case "Byte":
-			return Byte.Parse(val);
-		case "Char":
-			return Char.Parse(val);
-		case "Single":
-			return Single.Parse(val, cult);
-		case "Double":
-			return Double.Parse(val, cult);
-		case "Int32":
-			return Int32.Parse(val);
-		case "Int16":
-			return Int16.Parse(val);
-		case "Int64":
-			return Int64.Parse(val);
-		case "BigInteger":
-			return BigInteger.Parse(val, cult);
-		case "Decimal":
-			return decimal.Parse(val, cult);
-		case "DateTime":
-			return DateTime.Parse(val, cult).ToUniversalTime();
-		case "String":
-			return val;
-		default:
-			throw gcnew InvalidOperationException(type + " is not supported!");
-	}*/
+	String^ name = type->Name;
+	if (name->Equals("Boolean"))
+		return Boolean::Parse(val);
+	if (name->Equals("Byte"))
+		return Byte::Parse(val);
+	if (name->Equals("Char"))
+		return Char::Parse(val);
+	if (name->Equals("Single"))
+		return Single::Parse(val, cult);
+	if (name->Equals("Double"))
+		return Double::Parse(val, cult);
+	if (name->Equals("Int32"))
+		return Int32::Parse(val);
+	if (name->Equals("Int16"))
+		return Int16::Parse(val);
+	if (name->Equals("Int64"))
+		return Int64::Parse(val);
+	if (name->Equals("BigInteger"))
+		return BigInteger::Parse(val, cult);
+	if (name->Equals("Decimal"))
+		return Decimal::Parse(val, cult);
+	if (name->Equals("DateTime"))
+		return DateTime::Parse(val, cult).ToUniversalTime();
+	if (name->Equals("String"))
+		return val;
 	throw gcnew InvalidOperationException(type + " is not supported!");
 }
 
