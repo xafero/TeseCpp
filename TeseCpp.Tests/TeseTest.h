@@ -1,7 +1,14 @@
 
+#include "State.h"
+#include "City.h"
+#include "Address.h"
+#include "Customer.h"
+
 #pragma once
 
 using namespace System;
+using namespace System::Collections::Generic;
+using namespace System::Numerics;
 using namespace NUnit::Framework;
 using namespace TeseCpp;
 
