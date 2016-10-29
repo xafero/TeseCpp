@@ -3,7 +3,7 @@
 
 using namespace System;
 
-namespace Tese {
+namespace TeseCpp {
 
 	public ref class Tese 
 	{
