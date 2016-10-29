@@ -9,15 +9,6 @@ namespace TeseCppTests {
 	[TestFixture]
 	public ref class TeseTest 
 	{
-	public:
-		[SetUp]
-		void TestSetup();
-		[TearDown]
-		void TestTeardown();
-		[Test]
-		void TestDeserialize();
-		[Test]
-		void TestSerialize();
 	};
 
 }
