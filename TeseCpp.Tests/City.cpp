@@ -29,3 +29,11 @@ long TeseCppTests::City::Code::get() {
 Void TeseCppTests::City::Code::set(long value) {
 	this->code = value;
 }
+
+TeseCppTests::State^ TeseCppTests::City::_State::get() {
+	return this->state;
+}
+
+Void TeseCppTests::City::_State::set(State^ value) {
+	this->state = value;
+}

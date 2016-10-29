@@ -38,3 +38,11 @@ int TeseCppTests::Address::Number::get() {
 Void TeseCppTests::Address::Number::set(int value) {
 	this->number = value;
 }
+
+TeseCppTests::City^ TeseCppTests::Address::_City::get() {
+	return this->city;
+}
+
+Void TeseCppTests::Address::_City::set(City^ value) {
+	this->city = value;
+}
