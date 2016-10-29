@@ -5,8 +5,9 @@ using namespace System;
 
 namespace TeseCppTests {
 
-	public ref class State 
+	public enum class State 
 	{
+		IA, UT, VA, NY, MA
 	};
 
 }
