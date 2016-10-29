@@ -75,6 +75,7 @@
       <HintPath>..\packages\Kajabity.Tools.0.4.5928.1510\lib\net40\Kajabity.Tools.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Numerics" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Stdafx.h" />
