@@ -12,7 +12,7 @@ Void TeseCppTests::TeseTest::TestTeardown() {
 }
 
 Void TeseCppTests::TeseTest::TestDeserialize() {
-	Customer^ cus = tese->Deserialize<Customer>(Deflatten(txt1));
+	Customer^ cus = tese->Deserialize<Customer^>(Deflatten(txt1));
 	Assert::AreEqual(1, cus->Id);
 	Assert::AreEqual("Harry", cus->FirstName);
 	Assert::AreEqual("Johnson", cus->LastName);

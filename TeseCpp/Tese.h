@@ -10,8 +10,9 @@ namespace TeseCpp {
 	private:
 		literal String^ emptyPrefix = "";
 	public:
-		String^ Serialize(Object obj);
-		Object Deserialize(String^ txt);
+		String^ Serialize(Object^ obj);
+		generic <typename T>
+		T Deserialize(String^ txt);
 	};
 
 }

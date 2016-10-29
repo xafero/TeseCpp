@@ -3,12 +3,13 @@
 
 #include "Tese.h"
 
-String^ TeseCpp::Tese::Serialize(Object object) 
+String^ TeseCpp::Tese::Serialize(Object^ object) 
 {
-	return object.ToString();
+	return object->ToString();
 }
 
-Object TeseCpp::Tese::Deserialize(String^ object) 
+generic <typename T>
+T TeseCpp::Tese::Deserialize(String^ txt) 
 {
-	return object;
+	return safe_cast<T>(txt);
 }
