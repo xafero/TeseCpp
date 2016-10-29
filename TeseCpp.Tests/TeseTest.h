@@ -9,6 +9,9 @@ namespace TeseCppTests {
 	[TestFixture]
 	public ref class TeseTest 
 	{
+	public:
+		Void TestSerialize();
+		Void TestDeserialize();
 	};
 
 }
