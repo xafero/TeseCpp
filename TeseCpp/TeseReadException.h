@@ -5,8 +5,11 @@ using namespace System;
 
 namespace TeseCpp {
 
-	public ref class TeseReadException 
+	[Serializable]
+	public ref class TeseReadException : Exception
 	{
+	public:
+		TeseReadException(Exception^ t);
 	};
 
 }
